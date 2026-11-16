@@ -200,3 +200,31 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 }
 .hero-headline-rest { display:block; margin-top:6.5px; }
 
+/* White sections and dark-purple copy, following the light Hero palette. */
+.section,footer { background:var(--background-white); color:var(--text-hero); }
+.section h2,.section h3,.section p,.section .lead,.section .feature-list,
+.section .feature-list li,.section .price,.section .price strong,.section .price b,
+.section .price-before,.section .price-before s,.section .accordion-trigger,
+.faq-item>button,.faq-item>div p,.bonuses-section>.container>h2 {
+ color:var(--text-hero);
+}
+.bonuses-section::before,.bonuses-section::after { background:none; }
+.modules-section .content-card,.content-card,.offer-card,.faq-item {
+ background:var(--background-white);
+ color:var(--text-hero);
+ border-color:var(--border-soft);
+}
+.offer-card.featured {
+ background:linear-gradient(var(--background-white),var(--background-white)) padding-box,conic-gradient(from var(--offer-border-angle),var(--cta-color),var(--cta-light),var(--cta-dark),var(--cta-color)) border-box;
+ border-color:transparent;
+ color:var(--text-hero);
+}
+.offer-card.featured h3,.offer-card.featured p,.offer-card.featured .feature-list,
+.offer-card.featured .feature-list li,.offer-card.featured .price,
+.offer-card.featured .price strong,.offer-card.featured .price b,
+.offer-card.featured .price-before,.offer-card.featured .price-before s {
+ color:var(--text-hero);
+}
+.modules-section .accordion-trigger { border-color:var(--border-soft); }
+.offer-card .button-secondary { color:var(--text-hero); }
+.offer-card.featured .offer-action img,.offer-action img { filter:none; }
