@@ -107,13 +107,23 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 .offer-card.featured .offer-action .button:hover { animation:none; transform:none; filter:brightness(1.03); }
 .offer-card.featured .offer-action .button:active { animation:none; transform:none; }
 
-@keyframes complete-cta-hover { 0%,48%,100% { transform:translateX(0) } 8%,24% { transform:translateX(-5px) } 16%,32% { transform:translateX(5px) } 40% { transform:translateX(-2px) } }
-@media (prefers-reduced-motion:no-preference) {
- .offer-card.featured .offer-action .button { animation:complete-cta-hover 1.5s ease-in-out infinite; }
- .offer-card.featured .offer-action .button:hover { animation:complete-cta-hover 1.5s ease-in-out infinite; filter:none; }
+/* Start on touch devices too; avoid sticky iOS :active stopping the motion. */
+@keyframes complete-cta-hover { 0%,48%,100% { transform:translate3d(0,0,0) } 8%,24% { transform:translate3d(-5px,0,0) } 16%,32% { transform:translate3d(5px,0,0) } 40% { transform:translate3d(-2px,0,0) } }
+.offer-card.featured .offer-action .button,
+.offer-card.featured .offer-action .button:hover,
+.offer-card.featured .offer-action .button:active {
+ animation:complete-cta-hover 1.5s ease-in-out infinite;
+ animation-play-state:running;
+ backface-visibility:hidden;
+ will-change:transform;
+ filter:none;
+}
+@media (hover:hover) and (pointer:fine) {
  .offer-card.featured .offer-action .button:active { animation:none; transform:scale(.98); }
 }
-
+@media (prefers-reduced-motion:reduce) {
+ .offer-card.featured .offer-action .button { animation:none; transform:none; will-change:auto; }
+}
 /* Price hierarchy matching the supplied reference. */
 .price-label { font-weight:700; font-size:14px; line-height:1.4; margin-top:4px }
 .price-before { font-size:13px }
