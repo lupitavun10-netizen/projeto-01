@@ -18,7 +18,7 @@ footer { padding-block:48px; border-top:1px solid var(--border-soft); background
 
 .copy-paragraphs { white-space: pre-line; }
 
-/* Larissa Beauty - section colors and contrast */
+/* Larissa Beauty — section colors and contrast */
 .hero { background:linear-gradient(135deg,var(--background-dark) 0%,var(--background-dark-secondary) 60%,var(--background-card) 100%); color:var(--text-soft) }
 .hero h1 { color:var(--text-on-dark); font-weight:800 }
 .gradient-text { background:linear-gradient(110deg,var(--cta-color),var(--cta-light) 48%,var(--cta-dark)); background-clip:text; -webkit-background-clip:text; color:transparent }
@@ -83,7 +83,7 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 
 /* Motion for the complete offer, respecting reduced motion. */
 @property --offer-border-angle { syntax:'<angle>'; initial-value:0deg; inherits:false; }
-.offer-card.featured { --offer-border-angle:0deg; background:linear-gradient(var(--background-dark-secondary),var(--background-dark-secondary)) padding-box,conic-gradient(from var(--offer-border-angle),var(--cta-color),var(--cta-light),var(--cta-dark),var(--cta-color)) border-box; animation:offer-border-flow 6s linear infinite; }
+.offer-card.featured { --offer-border-angle:0deg; background:linear-gradient(96deg,var(--complete-card-shadow) 0%,var(--complete-card-magenta) 2%,var(--complete-card-pink) 3%,var(--complete-card-glint) 3.8%,var(--complete-card-pink) 4.6%,var(--complete-card-magenta) 7%,var(--complete-card-wine) 15%,var(--complete-card-shadow) 38%,var(--complete-card-wine) 65%,var(--complete-card-magenta) 86%,var(--complete-card-pink) 96%,var(--complete-card-magenta) 99%,var(--complete-card-shadow) 100%) padding-box,conic-gradient(from var(--offer-border-angle),var(--cta-color),var(--cta-light),var(--cta-dark),var(--cta-color)) border-box; animation:offer-border-flow 6s linear infinite; }
 @keyframes offer-border-flow { to { --offer-border-angle:360deg; } }
 @media (prefers-reduced-motion:no-preference) {
   .offer-card.featured .offer-action .button { background-size:220% 100%; animation:none; }
@@ -113,3 +113,10 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
  .offer-card.featured .offer-action .button:hover { animation:complete-cta-hover 1.5s ease-in-out infinite; filter:none; }
  .offer-card.featured .offer-action .button:active { animation:none; transform:scale(.98); }
 }
+
+/* Price hierarchy matching the supplied reference. */
+.price-label { font-weight:700; font-size:14px; line-height:1.4; margin-top:4px }
+.price-before { font-size:13px }
+.price-before s { text-decoration-color:var(--value-strike) }
+.price > span:last-child:not(.price-label):not(.price-before) { font-size:14px }
+
