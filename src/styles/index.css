@@ -134,3 +134,7 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 
 .offer-card.featured .feature-list svg,.offer-card.featured .bonus-value { color:var(--complete-offer-highlight); }
 
+/* Half the top spacing above the guarantee seal at every breakpoint. */
+.guarantee-section { padding-top:48px; }
+@media (max-width:1023px) { .guarantee-section { padding-top:40px; } }
+@media (max-width:767px) { .guarantee-section { padding-top:32px; } }
