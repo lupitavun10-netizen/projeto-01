@@ -44,7 +44,9 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 .offer-card .button-secondary { color:var(--text-on-dark); border-color:var(--cta-color) }
 .offer-card.featured { background:linear-gradient(var(--background-dark-secondary),var(--background-dark-secondary)) padding-box,linear-gradient(110deg,var(--cta-color),var(--cta-light) 48%,var(--cta-dark)) border-box; border:2px solid transparent; box-shadow:0 14px 38px rgba(73,0,120,.2) }
 .offer-card.featured .feature-list svg { color:var(--cta-color) }
-.offer-card.featured .offer-action .button,.offer-card.featured .offer-badge { background:linear-gradient(110deg,var(--cta-color) 0%,var(--cta-light) 48%,var(--cta-dark) 100%) }
+.offer-card.featured .offer-badge { background:linear-gradient(110deg,var(--cta-color) 0%,var(--cta-light) 48%,var(--cta-dark) 100%) }
+.offer-card.featured .offer-action .button { background:linear-gradient(110deg,var(--complete-offer-button) 0%,var(--complete-offer-button-light) 48%,var(--complete-offer-button-hover) 100%); color:var(--text-on-dark) }
+.offer-card.featured .offer-action .button:hover { filter:brightness(1.05) }
 .guarantee-seal { filter:brightness(0) saturate(100%) invert(18%) sepia(94%) saturate(4400%) hue-rotate(313deg) brightness(79%) contrast(116%) }
 .faq { display:grid; gap:16px; border:0 }
 .faq-item { padding-inline:24px; background:var(--background-white); border:1px solid var(--border-soft); border-radius:16px; box-shadow:0 6px 18px rgba(11,7,15,.035) }
@@ -78,3 +80,36 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 .modules-section .card-tag { background:var(--background-module-tag); color:var(--cta-dark); border:0; border-radius:8px; padding:8px 14px }
 .modal .button { width:100%; max-width:100%; padding-inline:8px; font-size:14px }
 @media (max-width:479px) { .modal .button { font-size:clamp(9px,2.8vw,13px) } }
+
+/* Motion for the complete offer, respecting reduced motion. */
+@property --offer-border-angle { syntax:'<angle>'; initial-value:0deg; inherits:false; }
+.offer-card.featured { --offer-border-angle:0deg; background:linear-gradient(var(--background-dark-secondary),var(--background-dark-secondary)) padding-box,conic-gradient(from var(--offer-border-angle),var(--cta-color),var(--cta-light),var(--cta-dark),var(--cta-color)) border-box; animation:offer-border-flow 6s linear infinite; }
+@keyframes offer-border-flow { to { --offer-border-angle:360deg; } }
+@media (prefers-reduced-motion:no-preference) {
+  .offer-card.featured .offer-action .button { background-size:220% 100%; animation:none; }
+  .offer-card.featured .offer-action .button:hover { animation:none; transform:none; filter:brightness(1.05); }
+}
+.offer-card.featured .offer-action .button:active { animation:none; transform:scale(.98); }
+@media (prefers-reduced-motion:reduce) { .offer-card.featured { animation:none; }.offer-card.featured .offer-action .button:hover { animation:none; transform:none; } }
+
+/* Olive-green metal with edge transitions and a lower-right glint. */
+.offer-card.featured .offer-action .button {
+ position:relative; overflow:hidden; isolation:isolate; animation:none; transform:none;
+ color:var(--text-on-dark); text-shadow:0 1px 3px rgba(0,0,0,.45);
+ border:1px solid var(--complete-offer-metal-edge);
+ background:linear-gradient(112deg,var(--complete-offer-metal-deep) 0%,var(--complete-offer-metal-mid) 3%,var(--complete-offer-metal-edge) 6%,var(--complete-offer-metal-light) 8%,var(--complete-offer-button-light) 10%,var(--complete-offer-button) 13%,var(--complete-offer-metal-shadow) 18%,var(--complete-offer-metal-deep) 24%,var(--complete-offer-metal-deep) 76%,var(--complete-offer-metal-shadow) 82%,var(--complete-offer-button) 87%,var(--complete-offer-metal-edge) 91%,var(--complete-offer-metal-light) 94%,var(--complete-offer-metal-mid) 97%,var(--complete-offer-metal-deep) 100%);
+ background-size:100% 100%; box-shadow:inset 0 1px 0 rgba(179,255,148,.3),inset 0 -2px 4px rgba(16,32,4,.3),0 8px 24px rgba(0,0,0,.3);
+}
+.offer-card.featured .offer-action .button::before {
+ content:""; position:absolute; z-index:-1; pointer-events:none; inset:0;
+ background:radial-gradient(ellipse 40px 24px at 97% 94%,var(--complete-offer-metal-reflection) 0%,var(--complete-offer-metal-glint) 14%,rgba(117,255,113,.65) 35%,rgba(117,255,113,0) 100%);
+}
+.offer-card.featured .offer-action .button:hover { animation:none; transform:none; filter:brightness(1.03); }
+.offer-card.featured .offer-action .button:active { animation:none; transform:none; }
+
+@keyframes complete-cta-hover { 0%,48%,100% { transform:translateX(0) } 8%,24% { transform:translateX(-5px) } 16%,32% { transform:translateX(5px) } 40% { transform:translateX(-2px) } }
+@media (prefers-reduced-motion:no-preference) {
+ .offer-card.featured .offer-action .button { animation:complete-cta-hover 1.5s ease-in-out infinite; }
+ .offer-card.featured .offer-action .button:hover { animation:complete-cta-hover 1.5s ease-in-out infinite; filter:none; }
+ .offer-card.featured .offer-action .button:active { animation:none; transform:scale(.98); }
+}
