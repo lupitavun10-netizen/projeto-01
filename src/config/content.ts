@@ -130,28 +130,28 @@ export const pageContent = {
     "title": "OFERTA COMPLETA",
     "items": [
       {
-        "label": "E-book Brow Lamination"
+        "label": "Curso Avançado de Brow Lamination"
       },
       {
-        "label": "Técnica passo a passo"
+        "label": "Passo a passo da técnica"
       },
       {
-        "label": "Acesso vitalício"
+        "label": "Acesso vitalício ao material"
       },
       {
-        "label": "Bônus 01: Guia Brow Sem Erros",
-        "value": "R$ 39,00"
+        "label": "BÔNUS 01: Guia Brow",
+        "value": "R$ 19,90"
       },
       {
-        "label": "Bônus 02: Quanto Cobrar?",
-        "value": "R$ 29,00"
+        "label": "BÔNUS 02: Quanto Cobrar",
+        "value": "R$ 19,90"
       },
       {
-        "label": "Bônus 03: Primeiras Clientes Brow",
-        "value": "R$ 29,00"
+        "label": "BÔNUS 03: Primeiras Clientes",
+        "value": "R$ 19,90"
       }
     ],
-    "previousPrice": "R$ 147,00",
+    "previousPrice": "R$ 89,60",
     "installmentCount": 6,
     "installmentValue": "R$ 9,49",
     "cashValue": "R$ 49,90",
