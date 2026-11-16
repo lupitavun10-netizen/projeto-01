@@ -246,7 +246,7 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 .modules-section .content-card .accordion-trigger svg { color:var(--text-on-dark); }
 .modules-section .content-card .accordion-trigger { border-color:rgba(255,255,255,.22); }
 .modules-section .content-card .card-tag {
- background:var(--price-tag-gold);
+ background:var(--complete-offer-highlight);
  color:var(--headline-highlight-text);
  border:0;
 }
@@ -258,7 +258,7 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 }
 .bonuses-section .bonus h3,.bonuses-section .bonus p { color:var(--text-on-dark); }
 .bonuses-section .bonus .bonus-benefit { color:var(--text-on-dark); }
-.bonuses-section .bonus .card-tag { background:var(--price-tag-gold); color:var(--headline-highlight-text); border:0; padding:6px 12px; border-radius:8px; }
+.bonuses-section .bonus .card-tag { background:var(--complete-offer-highlight); color:var(--headline-highlight-text); border:0; padding:6px 12px; border-radius:8px; }
 .bonuses-section .bonus > s { color:var(--bonus-card-accent); }
 
 /* Separate soft simple offer from the luminous metallic complete offer. */
