@@ -165,3 +165,16 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 }
 .hero { overflow:hidden; }
 
+/* Gold marker beneath the Hero phrase, with dark-purple lettering. */
+.hero h1,.hero .lead { color:var(--text-hero); }
+.hero h1 .gradient-text {
+ color:var(--text-hero);
+ -webkit-text-fill-color:currentColor;
+ background:linear-gradient(110deg,var(--headline-gold-base) 0%,var(--headline-gold-light) 18%,var(--headline-gold-reflection) 25%,var(--headline-gold-base) 40%,var(--headline-gold-shadow) 50%,var(--headline-gold-light) 64%,var(--headline-gold-reflection) 72%,var(--headline-gold-base) 86%,var(--headline-gold-light) 100%) left 92% / 100% 28% no-repeat;
+ -webkit-background-clip:border-box;
+ background-clip:border-box;
+ -webkit-box-decoration-break:clone;
+ box-decoration-break:clone;
+ filter:none;
+}
+@media (max-width:767px) { .hero h1 { font-size:22px; } }
