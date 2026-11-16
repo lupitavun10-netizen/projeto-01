@@ -261,3 +261,12 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 .bonuses-section .bonus .card-tag { background:var(--headline-highlight-gold); color:var(--headline-highlight-text); border:0; padding:6px 12px; border-radius:8px; }
 .bonuses-section .bonus > s { color:var(--bonus-card-accent); }
 
+/* Separate soft simple offer from the luminous metallic complete offer. */
+.offers-section .offer-card:not(.featured) { background:var(--offer-simple-pink); }
+.offers-section .offer-card.featured { background:radial-gradient(ellipse at 98% 100%,var(--complete-card-glint) 0%,transparent 24%) padding-box,linear-gradient(95deg,transparent 0%,var(--complete-card-pink) 1%,var(--complete-card-glint) 2%,var(--complete-card-pink) 3.5%,transparent 14%,transparent 86%,var(--complete-card-pink) 97%,var(--complete-card-glint) 99%,transparent 100%) padding-box,linear-gradient(115deg,var(--complete-card-shadow) 0%,var(--complete-card-magenta) 23%,var(--complete-card-wine) 43%,var(--complete-card-shadow) 61%,var(--complete-card-wine) 79%,var(--complete-card-pink) 100%) padding-box,linear-gradient(120deg,var(--complete-card-pink),var(--complete-card-wine),var(--complete-card-glint)) border-box; color:var(--text-on-dark); animation:none; }
+.offers-section .offer-card.featured h3,.offers-section .offer-card.featured p,.offers-section .offer-card.featured .feature-list,.offers-section .offer-card.featured .feature-list li,.offers-section .offer-card.featured .price,.offers-section .offer-card.featured .price strong,.offers-section .offer-card.featured .price b,.offers-section .offer-card.featured .price-before,.offers-section .offer-card.featured .price-before s { color:var(--text-on-dark); }
+.offers-section .offer-card.featured .offer-action img { filter:brightness(0) invert(1); }
+
+/* Static wine and pink finish, matching the supplied metallic references. */
+.offers-section .offer-card.featured .offer-badge { background:linear-gradient(110deg,var(--complete-card-magenta),var(--complete-card-wine)); }
+
