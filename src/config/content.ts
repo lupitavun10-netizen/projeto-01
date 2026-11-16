@@ -9,9 +9,9 @@ export const pageContent = {
   hero: {
     image: '/images/hero-mockup.webp',
     imageAlt: 'Mockup do curso de Brow Lamination',
-    headline: 'Conquiste uma renda extra aprendendo a transformar sobrancelhas finas e falhadas em sobrancelhas cheias e volumosas com um passo a passo que você pode estudar em até 7 dias!',
+    headline: 'Conquiste uma renda extra aprendendo a transformar sobrancelhas finas e falhadas em sobrancelhas cheias e volumosas com um passo a passo que você pode aplicar em até 7 dias!',
     headlineHighlight: 'Conquiste uma renda extra',
-    body: 'Seja você iniciante ou profissional da área da beleza, aprenda do zero o passo a passo para criar sobrancelhas mais cheias, encorpadas e alinhadas, conquiste uma renda extra e descubra como cobrar de R$ 130 a R$ 180 por procedimento — com meu suporte direto!',
+    body: 'Seja você iniciante ou profissional da área da beleza, aprenda do zero o passo a passo para criar sobrancelhas mais cheias, encorpadas e alinhadas, conquiste uma renda extra e descubra como cobrar de R$ 130 a R$ 180 por procedimento, com meu suporte direto!',
     ctaLabel: 'QUERO APRENDER AGORA',
     securityImage: '/images/selos-seguranca-compra.svg',
     securityImageAlt: 'Selos de compra segura, satisfação garantida e privacidade protegida',
