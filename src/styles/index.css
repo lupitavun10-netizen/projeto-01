@@ -178,3 +178,16 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
  filter:none;
 }
 @media (max-width:767px) { .hero h1 { font-size:22px; } }
+/* A compact gold rectangular highlight behind the complete phrase. */
+.hero h1 .gradient-text {
+ padding:.04em .18em .07em;
+ border-radius:3px;
+ background:linear-gradient(112deg,var(--headline-gold-panel-deep) 0%,var(--headline-gold-panel) 18%,var(--headline-gold-panel-light) 33%,var(--headline-gold-reflection) 39%,var(--headline-gold-panel) 48%,var(--headline-gold-panel-deep) 64%,var(--headline-gold-panel) 78%,var(--headline-gold-panel-light) 91%,var(--headline-gold-panel) 100%);
+ color:var(--text-hero);
+ -webkit-text-fill-color:currentColor;
+ -webkit-background-clip:border-box;
+ background-clip:border-box;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 2px 6px rgba(142,94,0,.14);
+ -webkit-box-decoration-break:clone;
+ box-decoration-break:clone;
+}
