@@ -198,3 +198,5 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
  -webkit-text-fill-color:currentColor;
  box-shadow:0 0 7px var(--headline-highlight-glow),0 0 17px var(--headline-highlight-glow);
 }
+.hero-headline-rest { display:block; margin-top:8px; }
+
