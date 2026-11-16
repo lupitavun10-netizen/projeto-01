@@ -138,3 +138,12 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 .guarantee-section { padding-top:48px; }
 @media (max-width:1023px) { .guarantee-section { padding-top:40px; } }
 @media (max-width:767px) { .guarantee-section { padding-top:32px; } }
+/* Metallic luminous gold for the Hero highlight. */
+.hero h1 .gradient-text {
+ color:var(--headline-gold-light);
+ background:linear-gradient(110deg,var(--headline-gold-base) 0%,var(--headline-gold-light) 18%,var(--headline-gold-reflection) 24%,var(--headline-gold-base) 33%,var(--headline-gold-shadow) 43%,var(--headline-gold-light) 54%,var(--headline-gold-reflection) 60%,var(--headline-gold-base) 70%,var(--headline-gold-light) 88%,var(--headline-gold-base) 100%);
+ -webkit-background-clip:text;
+ background-clip:text;
+ -webkit-text-fill-color:transparent;
+ filter:drop-shadow(0 0 5px rgba(255,226,85,.28));
+}
