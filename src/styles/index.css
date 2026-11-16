@@ -140,3 +140,20 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 @media (max-width:1023px) { .guarantee-section { padding-top:40px; } }
 @media (max-width:767px) { .guarantee-section { padding-top:32px; } }
 .hero h1 .gradient-text { background:none; color:var(--text-hero); -webkit-text-fill-color:currentColor; filter:none; }
+/* Anchor the Hero artwork to the right and blend its cut edges into the background. */
+.hero-media {
+ position:relative;
+ align-self:flex-end;
+ margin-right:calc(-1 * max(32px, calc((100vw - 1200px) / 2)));
+ filter:none;
+}
+.hero-media::after {
+ content:"";
+ position:absolute;
+ inset:0;
+ pointer-events:none;
+ background:linear-gradient(to left,var(--background-hero) 0%,transparent 5%),linear-gradient(to right,var(--background-hero) 0%,transparent 3%),linear-gradient(to top,var(--background-hero) 0%,transparent 12%);
+}
+@media (max-width:767px) {
+ .hero-media { margin-right:-24px; }
+}
