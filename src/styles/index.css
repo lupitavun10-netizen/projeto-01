@@ -235,3 +235,29 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 .offers-section { background:var(--background-offers); }
 .guarantee-section { background:var(--background-guarantee); }
 .faq-section { background:var(--background-faq); }
+/* Wine metallic module cards with soft pink edge reflections. */
+.modules-section .content-card {
+ background:radial-gradient(ellipse at 100% 100%,var(--module-card-glint) 0%,transparent 30%),linear-gradient(100deg,var(--module-card-shadow) 0%,var(--module-card-light) 3%,var(--module-card-glint) 4.5%,var(--module-card-light) 7%,var(--module-card-base) 22%,var(--module-card-shadow) 57%,var(--module-card-base) 80%,var(--module-card-light) 100%);
+ color:var(--text-on-dark);
+ border-color:var(--module-card-light);
+}
+.modules-section .content-card h3,.modules-section .content-card p,
+.modules-section .content-card .accordion-trigger,
+.modules-section .content-card .accordion-trigger svg { color:var(--text-on-dark); }
+.modules-section .content-card .accordion-trigger { border-color:rgba(255,255,255,.22); }
+.modules-section .content-card .card-tag {
+ background:var(--headline-highlight-gold);
+ color:var(--headline-highlight-text);
+ border:0;
+}
+/* Polished purple bonus cards with bright, narrow side reflections. */
+.bonuses-section .content-card.bonus {
+ background:radial-gradient(ellipse at 100% 100%,var(--bonus-card-reflection) 0%,transparent 24%),linear-gradient(94deg,transparent 0%,var(--bonus-card-soft) 1.5%,var(--bonus-card-reflection) 2.5%,var(--bonus-card-soft) 3.5%,transparent 12%,transparent 88%,var(--bonus-card-soft) 96%,var(--bonus-card-reflection) 97.5%,var(--bonus-card-soft) 98.5%,transparent 100%),linear-gradient(110deg,var(--bonus-card-deep) 0%,var(--bonus-card-purple) 24%,var(--bonus-card-soft) 44%,var(--bonus-card-purple) 58%,var(--bonus-card-deep) 80%,var(--bonus-card-purple) 100%);
+ color:var(--text-on-dark);
+ border-color:var(--bonus-card-soft);
+}
+.bonuses-section .bonus h3,.bonuses-section .bonus p { color:var(--text-on-dark); }
+.bonuses-section .bonus .bonus-benefit { color:var(--text-on-dark); }
+.bonuses-section .bonus .card-tag { background:var(--headline-highlight-gold); color:var(--headline-highlight-text); border:0; padding:6px 12px; border-radius:8px; }
+.bonuses-section .bonus > s { color:var(--bonus-card-accent); }
+
