@@ -47,7 +47,8 @@ function Price({ data }: { data: { previousPrice: string; installmentCount: numb
   </div>
   const ready = data.previousPrice || data.installmentValue || data.cashValue
   return <div className="price" aria-label={ready ? 'Preço da oferta' : 'Preço a definir'}>
-    <span className="price-before"><s>{data.previousPrice ? `De ${data.previousPrice}` : 'Preço anterior a definir'}</s> por apenas</span>
+    <span className="price-before"><s>{data.previousPrice ? `De ${data.previousPrice}` : 'Preço anterior a definir'}</s></span>
+    <span className="price-label">{data.priceLabel || 'Hoje por apenas'}</span>
     <strong>{data.installmentCount && data.installmentValue ? `${data.installmentCount}x de ${data.installmentValue}` : 'Preço a definir'}</strong>
     <span>ou <b>{data.cashValue || 'valor a definir'}</b> à vista no PIX</span>
   </div>
@@ -188,3 +189,4 @@ function App() {
 }
 
 export default App
+
