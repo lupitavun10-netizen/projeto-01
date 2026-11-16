@@ -9,8 +9,9 @@ export const pageContent = {
   hero: {
     image: '/images/hero-mockup.webp',
     imageAlt: 'Mockup do curso de Brow Lamination',
-    headline: 'Aprenda a deixar sobrancelhas finas, cheias e volumosas imediatamente em apenas 7 dias e inicie uma nova profissão investindo muito pouco!',
-    body: 'Descubra o passo a passo personalizado para criar sobrancelhas mais encorpadas, alinhadas e super cheias mesmo começando do zero, Seja você iniciante ou profissional da beleza, tenha uma renda extra, fature R$ 130,00 a R$ 180,00 por procedimento, com suporte direto comigo!',
+    headline: 'Conquiste uma renda extra aprendendo a transformar sobrancelhas finas e falhadas em sobrancelhas cheias e volumosas com um passo a passo que você pode estudar em até 7 dias!',
+    headlineHighlight: 'Conquiste uma renda extra',
+    body: 'Seja você iniciante ou profissional da área da beleza, aprenda do zero o passo a passo para criar sobrancelhas mais cheias, encorpadas e alinhadas, conquiste uma renda extra e descubra como cobrar de R$ 130 a R$ 180 por procedimento — com meu suporte direto!',
     ctaLabel: 'QUERO APRENDER AGORA',
     securityImage: '/images/selos-seguranca-compra.svg',
     securityImageAlt: 'Selos de compra segura, satisfação garantida e privacidade protegida',
