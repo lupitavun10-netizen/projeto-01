@@ -8,6 +8,7 @@ export const theme = {
     '--complete-offer-metal-shadow': '#087D2B',
     '--complete-offer-metal-glint': '#B3FF94',
     '--complete-offer-metal-deep': '#07852B',
+    '--complete-offer-metal-center': '#189735',
     '--complete-offer-metal-mid': '#10AF36',
     '--complete-offer-metal-edge': '#29E34D',
     '--complete-offer-metal-light': '#75FF71',
