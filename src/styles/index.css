@@ -130,3 +130,5 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 .price-before s { text-decoration-color:var(--value-strike) }
 .price > span:last-child:not(.price-label):not(.price-before) { font-size:14px }
 
+.offer-card.featured .feature-list li { font-size:14px; }
+
