@@ -19,11 +19,12 @@ footer { padding-block:48px; border-top:1px solid var(--border-soft); background
 .copy-paragraphs { white-space: pre-line; }
 
 /* Larissa Beauty — section colors and contrast */
-.hero { background:linear-gradient(135deg,var(--background-dark) 0%,var(--background-dark-secondary) 60%,var(--background-card) 100%); color:var(--text-soft) }
-.hero h1 { color:var(--text-on-dark); font-weight:800 }
+.hero { background:var(--background-hero); color:var(--text-hero) }
+.hero h1 { color:var(--text-hero); font-weight:800 }
 .gradient-text { background:linear-gradient(110deg,var(--cta-color),var(--cta-light) 48%,var(--cta-dark)); background-clip:text; -webkit-background-clip:text; color:transparent }
 .hero-media { filter:drop-shadow(0 12px 28px rgba(192,0,101,.18)) }
-.hero-action img,.offer-action img { filter:brightness(0) invert(1); opacity:.9 }
+.hero-action img { filter:none; opacity:.9 }
+.offer-action img { filter:brightness(0) invert(1); opacity:.9 }
 .button { background-size:100% 100%; font-weight:800; min-height:60px; border-radius:12px }
 .button:hover { transform:translateY(-2px); box-shadow:0 10px 26px rgba(73,0,120,.22) }
 .button:active { transform:scale(.98) }
