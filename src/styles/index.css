@@ -157,3 +157,11 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 @media (max-width:767px) {
  .hero-media { margin-right:-24px; }
 }
+/* Expand the complete artwork across the Hero while keeping its right edge anchored. */
+.hero .hero-media {
+ width:calc(100vw - 24px);
+ max-width:none;
+ flex-shrink:0;
+}
+.hero { overflow:hidden; }
+
