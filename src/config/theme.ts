@@ -2,6 +2,11 @@ export const theme = {
   brand: { primary: '#C00065', primaryDark: '#490078', primaryLight: '#920080' },
   cta: { color: '#C00065', dark: '#490078', light: '#920080' },
   tokens: {
+    '--complete-card-wine': '#49051E',
+    '--complete-card-shadow': '#230813',
+    '--complete-card-magenta': '#760A31',
+    '--complete-card-pink': '#C72461',
+    '--complete-card-glint': '#EF97B6',
     '--complete-offer-button': '#19C943',
     '--complete-offer-button-hover': '#07852B',
     '--complete-offer-button-light': '#58EF62',
@@ -30,3 +35,4 @@ export const theme = {
     '--text-soft': '#F8F5FA', '--text-muted': '#A9A1AF', '--value-strike': '#B83450',
   },
 }
+
