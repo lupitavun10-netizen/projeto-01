@@ -223,3 +223,10 @@ Todos em `public/images/`. A Hero usa hero-mockup.webp; os demais slots de produ
 - Hero/ofertas em preto frio; módulos/garantia em preto secundário; resultados/bônus/FAQ em off-white.
 - Paleta em src/config/theme.ts; degradê oficial #C00065 → #920080 → #490078.
 - Botões com raio 12px e altura mínima de 60px; modal claro com overlay 75%. Estrutura e copy preservadas.
+
+## Valores provisórios autorizados — 16/11/2026
+- Usuária solicitou preços fictícios para visualizar o modelo da referência; substituir antes de definir a oferta final.
+- Simples: de R$ 97,00; 4x de R$ 8,49; R$ 29,90 à vista no PIX.
+- Completa: de R$ 147,00; 6x de R$ 9,49; R$ 49,90 à vista no PIX.
+- Modelo: preço anterior riscado, Hoje por apenas, parcelas em destaque e PIX abaixo. Modal preservado.
+
