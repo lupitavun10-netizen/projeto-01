@@ -271,5 +271,5 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 .offers-section .offer-card.featured .offer-badge { background:linear-gradient(110deg,var(--complete-card-magenta),var(--complete-card-wine)); }
 
 /* Gold tag limited to the complete offer cash amount. */
-.offers-section .offer-card.featured .price > span > b { display:inline-block; padding:4px 10px; border-radius:8px; background:var(--headline-highlight-gold); color:var(--headline-highlight-text); white-space:nowrap; }
+.offers-section .offer-card.featured .price > span > b { display:inline-block; padding:4px 10px; border-radius:8px; background:var(--price-tag-gold); color:var(--headline-highlight-text); white-space:nowrap; }
 
