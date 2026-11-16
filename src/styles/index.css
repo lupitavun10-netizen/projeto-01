@@ -228,3 +228,10 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--cta-color); outli
 .modules-section .accordion-trigger { border-color:var(--border-soft); }
 .offer-card .button-secondary { color:var(--text-hero); }
 .offer-card.featured .offer-action img,.offer-action img { filter:none; }
+/* Alternating soft lilac backgrounds drawn from the Hero palette. */
+.results-section { background:var(--background-results); }
+.modules-section { background:var(--background-modules); }
+.bonuses-section { background:var(--background-bonuses-light); }
+.offers-section { background:var(--background-offers); }
+.guarantee-section { background:var(--background-guarantee); }
+.faq-section { background:var(--background-faq); }
