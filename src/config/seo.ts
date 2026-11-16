@@ -1,1 +1,1 @@
-export const seo = { title: 'Matriz Página de Vendas', description: '', canonical: '', ogTitle: '', ogDescription: '', ogImage: '', robots: 'noindex,nofollow' }
+export const seo = { title: 'Curso Avançado de Brow Lamination | Larissa Beauty', description: '', canonical: '', ogTitle: '', ogDescription: '', ogImage: '', robots: 'noindex,nofollow' }

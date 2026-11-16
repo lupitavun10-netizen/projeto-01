@@ -209,3 +209,17 @@ Todos em `public/images/`. A Hero usa hero-mockup.webp; os demais slots de produ
 - Destino: Cloudflare Pages via GitHub, saída dist e versões do README.
 - GA, GTM e TikTok são campos reservados sem carregador; preenchê-los não ativa a integração e não bloqueia a publicação.
 - Nenhuma autorização histórica nesta ficha deve ser herdada por um produto novo.
+
+## Personalização autorizada — Larissa Beauty (15/11/2026)
+- Copy integral enviada pela usuária aplicada nas seções, com imagens existentes preservadas.
+- Exceção estrutural autorizada pela nova copy: quatro módulos; quarto usa /images/modulo-4.webp. Grid e componentes mantidos.
+- Oferta simples: R$ 29,90; completa: R$ 49,90; upgrade: de R$ 49,90 por R$ 39,90. Parcelamentos e preços anteriores de demonstração das ofertas removidos; apresentação de preço único conforme copy.
+- Oferta completa e modal usam a mesma lista de itens, conforme contrato.
+- Cabeçalho de módulos mantido literalmente como fornecido: “Tudo o que você precisa aprender para parar de fazer Brow lamination”.
+- Links e tracking não fornecidos permanecem inalterados. Nenhuma publicação solicitada nesta revisão.
+
+## Identidade visual autorizada — 15/11/2026
+- Montserrat 400–800 substitui Bricolage Grotesque nesta página, conforme identidade oficial enviada.
+- Hero/ofertas em preto frio; módulos/garantia em preto secundário; resultados/bônus/FAQ em off-white.
+- Paleta em src/config/theme.ts; degradê oficial #C00065 → #920080 → #490078.
+- Botões com raio 12px e altura mínima de 60px; modal claro com overlay 75%. Estrutura e copy preservadas.

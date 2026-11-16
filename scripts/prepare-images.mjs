@@ -67,7 +67,7 @@ if (!validateOnly) {
 
     const temporary = `${destination}.tmp`
     await sharp(file, { animated: true }).webp({ quality: config.webpQuality, effort: 6 }).toFile(temporary)
-    await sharp(temporary).metadata()
+    await sharp(await fs.readFile(temporary)).metadata()
     await fs.rename(temporary, destination)
     await updateReferences(relative, normalizedRelative)
     await fs.unlink(file)

@@ -8,15 +8,15 @@ export const pageContent = {
   },
   hero: {
     image: '/images/hero-mockup.webp',
-    imageAlt: 'Mockup do produto',
-    headline: '[Diga o que o produto resolve] com o [Nome do Método ou Mecanismo] em apenas [Prazo do Resultado]',
-    body: 'Explique como o método funciona, quais benefícios principais ele entrega e para quem ele é indicado, incluindo uma objeção comum que o produto consegue superar.',
-    ctaLabel: 'ADICIONAR CTA',
+    imageAlt: 'Mockup do curso de Brow Lamination',
+    headline: 'Aprenda a deixar sobrancelhas finas, cheias e volumosas imediatamente em apenas 7 dias e inicie uma nova profissão investindo muito pouco!',
+    body: 'Descubra o passo a passo personalizado para criar sobrancelhas mais encorpadas, alinhadas e super cheias mesmo começando do zero, Seja você iniciante ou profissional da beleza, tenha uma renda extra, fature R$ 130,00 a R$ 180,00 por procedimento, com suporte direto comigo!',
+    ctaLabel: 'QUERO APRENDER AGORA',
     securityImage: '/images/selos-seguranca-compra.svg',
     securityImageAlt: 'Selos de compra segura, satisfação garantida e privacidade protegida',
   },
   results: {
-    title: 'Veja o que estão dizendo sobre o [Produto/Método]',
+    title: 'Olha o que acontece quando você aprende a fazer Brow Lamination do jeito certo!',
     items: Array.from({ length: 6 }, (_, index) => ({
       src: '',
       alt: `Placeholder: Depoimento ${index + 1} 400×600`,
@@ -24,61 +24,183 @@ export const pageContent = {
       ratio: '2:3' as const,
     })),
   },
-  modulesSection: { title: 'Tudo o que você receberá assim que confirmar sua compra' },
+  modulesSection: { title: 'Tudo o que você precisa aprender para parar de fazer Brow lamination' },
   modules: [
-    { src: '', alt: 'Módulo 1 320×320', label: 'Módulo 1 320×320', ratio: '1:1' as const, eyebrow: 'Módulo 01', title: 'Titulo do modulo 01', description: 'coloque aqui a descrição do que vai ter nesse modulo' },
-    { src: '', alt: 'Módulo 2 320×320', label: 'Módulo 2 320×320', ratio: '1:1' as const, eyebrow: 'Módulo 02', title: 'Titulo do modulo 02', description: 'coloque aqui a descrição do que vai ter nesse modulo' },
-    { src: '', alt: 'Módulo 3 320×320', label: 'Módulo 3 320×320', ratio: '1:1' as const, eyebrow: 'Módulo 03', title: 'Titulo do modulo 03', description: 'coloque aqui a descrição do que vai ter nesse modulo' },
-  ],
-  bonusesSection: { title: 'E você ainda recebe 3 bônus exclusivos' },
+  {
+    "src": "/images/modulo1.webp",
+    "alt": "Capa do módulo 1: A Origem da Técnica",
+    "label": "Módulo 01",
+    "ratio": "1:1",
+    "eyebrow": "Módulo 01",
+    "title": "A Origem da Técnica",
+    "description": "Descubra a origem da técnica, como ela funciona e por que é tão procurada para transformar a aparência de sobrancelhas finas e falhadas em sobrancelhas mais cheias, alinhadas e volumosas."
+  },
+  {
+    "src": "/images/modulo2.webp",
+    "alt": "Capa do módulo 2: Os Materiais da Minha Técnica Exclusiva",
+    "label": "Módulo 02",
+    "ratio": "1:1",
+    "eyebrow": "Módulo 02",
+    "title": "Os Materiais da Minha Técnica Exclusiva",
+    "description": "Tenha acesso à lista dos produtos e materiais que utilizo na minha técnica avançada e personalizada, com orientações para você saber o que precisa antes de começar."
+  },
+  {
+    "src": "/images/modulo3.webp",
+    "alt": "Capa do módulo 3: Meu Passo a Passo na Prática",
+    "label": "Módulo 03",
+    "ratio": "1:1",
+    "eyebrow": "Módulo 03",
+    "title": "Meu Passo a Passo na Prática",
+    "description": "Aprenda minha sequência de aplicação personalizada, do preparo dos fios até o acabamento final, com fotos demonstrativas para acompanhar cada etapa e entender os detalhes que fazem diferença no resultado."
+  },
+  {
+    "src": "/images/modulo-4.webp",
+    "alt": "Capa do módulo 4: Resultados Reais da Criadora",
+    "label": "Módulo 04",
+    "ratio": "1:1",
+    "eyebrow": "Módulo 04",
+    "title": "Resultados Reais da Criadora",
+    "description": "Veja fotos reais dos meus próprios atendimentos e descubra o efeito que minha técnica proporciona em diferentes sobrancelhas, com acabamentos naturais, alinhados e visualmente mais volumosos."
+  }
+] as ProductItem[],
+  bonusesSection: { title: 'E para você não ficar perdida na hora de começar, preparei 3 bônus especiais!' },
   bonuses: [
-    { src: '', alt: '🎁 Bônus 01 - Incluso na oferta completa 320×320', label: '🎁 Bônus 01 - Incluso na oferta completa 320×320', ratio: '1:1' as const, eyebrow: 'Bônus 01', title: 'Titulo do bônus 01', description: 'coloque aqui a descrição sobre esse bonus completa', value: 'R$ 39,00' },
-    { src: '', alt: '🎁 Bônus 02 - Incluso na oferta completa 320×320', label: '🎁 Bônus 02 - Incluso na oferta completa 320×320', ratio: '1:1' as const, eyebrow: 'Bônus 02', title: 'Titulo do bônus 02', description: 'coloque aqui a descrição sobre esse bonus completa', value: 'R$ 29,00' },
-    { src: '', alt: '🎁 Bônus 03 - Incluso na oferta completa 320×320', label: '🎁 Bônus 03 - Incluso na oferta completa 320×320', ratio: '1:1' as const, eyebrow: 'Bônus 03', title: 'Titulo do bônus 03', description: 'coloque aqui a descrição sobre esse bonus completa', value: 'R$ 29,00' },
-  ],
+  {
+    "src": "/images/bonus-1.webp",
+    "alt": "Capa do bônus 1: Guia Brow Sem Erros",
+    "label": "Bônus 01",
+    "ratio": "1:1",
+    "eyebrow": "Bônus 01",
+    "title": "Guia Brow Sem Erros",
+    "description": "Um checklist para consultar antes dos atendimentos, organizar seus materiais, conferir os cuidados necessários e evitar esquecer etapas importantes do procedimento.",
+    "benefit": "Mais organização e segurança na sua rotina profissional.",
+    "value": "R$ 39,00"
+  },
+  {
+    "src": "/images/bonus-2.webp",
+    "alt": "Capa do bônus 2: Quanto Cobrar Pelo Seu Brow?",
+    "label": "Bônus 02",
+    "ratio": "1:1",
+    "eyebrow": "Bônus 02",
+    "title": "Quanto Cobrar Pelo Seu Brow?",
+    "description": "Um guia prático para calcular seus custos, entender quanto precisa cobrar e evitar trabalhar muito sem saber quanto realmente está ganhando.",
+    "benefit": "Aprenda a valorizar seu serviço e organizar seus preços.",
+    "value": "R$ 29,00"
+  },
+  {
+    "src": "/images/bonus-3.webp",
+    "alt": "Capa do bônus 3: Primeiras Clientes Brow",
+    "label": "Bônus 03",
+    "ratio": "1:1",
+    "eyebrow": "Bônus 03",
+    "title": "Primeiras Clientes Brow",
+    "description": "Modelos de mensagens para WhatsApp, ideias de divulgação e sugestões de conteúdos para mostrar seu trabalho e despertar o interesse de possíveis clientes.",
+    "benefit": "Saiba por onde começar a divulgar sua nova habilidade.",
+    "value": "R$ 29,00"
+  }
+] as (ProductItem & { benefit: string; value: string })[],
   offersSection: {
-    title: 'Escolha sua oferta',
+    title: 'Quanto vale aprender uma técnica que você pode usar para oferecer um novo serviço na área da beleza?',
     paymentSecurityImage: '/images/metodos-pagamento-seguranca.svg',
     paymentSecurityAlt: 'Métodos de pagamento e selos de compra segura, satisfação garantida e privacidade protegida',
   },
   offers: {
-    simple: {
-      title: 'Oferta Simples',
-      items: ['adicione nome do produto aqui', 'Acesso Vitalício'],
-      previousPrice: 'R$ 97,00', installmentCount: 4, installmentValue: 'R$ 4,89', cashValue: 'R$ 19,90', ctaLabel: 'Oferta Simples',
-    },
-    complete: {
-      badge: 'Mais Vendido', title: 'Oferta Completa',
-      items: [
-        { label: 'adicione nome do produto aqui' },
-        { label: 'Acesso Vitalício' },
-        { label: 'titulo do bonus 1', value: 'R$ 39,00' },
-        { label: 'titulo do bonus 2', value: 'R$ 29,00' },
-        { label: 'titulo do bonus 3', value: 'R$ 29,00' },
-      ],
-      previousPrice: 'R$ 194,00', installmentCount: 6, installmentValue: 'R$ 5,89', cashValue: 'R$ 29,90', ctaLabel: 'Oferta Completa',
-    },
-    popup: {
-      eyebrow: 'Espere! Não saia ainda...',
-      message: 'Você escolheu a oferta simples. Desbloqueie agora a Oferta Completa com todos os bônus inclusos:',
-      title: 'Oferta especial', previousPrice: 'R$ 29,90', installmentCount: 5, installmentValue: 'R$ 4,90', cashValue: 'R$ 22,90',
-      ctaLabel: 'COM DESCONTO', secondaryLabel: 'SEM DESCONTO',
-    },
+  "simple": {
+    "title": "OFERTA SIMPLES",
+    "items": [
+      {
+        "label": "Curso Avançado de Brow Lamination em e-book"
+      },
+      {
+        "label": "Passo a passo da técnica personalizada"
+      },
+      {
+        "label": "Acesso vitalício ao material"
+      }
+    ],
+    "previousPrice": "",
+    "installmentCount": 0,
+    "installmentValue": "",
+    "cashValue": "R$ 29,90",
+    "priceLabel": "HOJE POR APENAS",
+    "ctaLabel": "QUERO A OFERTA SIMPLES"
   },
+  "complete": {
+    "badge": "MAIS VENDIDO",
+    "title": "OFERTA COMPLETA",
+    "items": [
+      {
+        "label": "Curso Avançado de Brow Lamination em e-book"
+      },
+      {
+        "label": "Passo a passo da técnica personalizada"
+      },
+      {
+        "label": "Acesso vitalício ao material"
+      },
+      {
+        "label": "Bônus 01: Guia Brow Sem Erros",
+        "value": "R$ 39,00"
+      },
+      {
+        "label": "Bônus 02: Quanto Cobrar Pelo Seu Brow?",
+        "value": "R$ 29,00"
+      },
+      {
+        "label": "Bônus 03: Primeiras Clientes Brow",
+        "value": "R$ 29,00"
+      }
+    ],
+    "previousPrice": "",
+    "installmentCount": 0,
+    "installmentValue": "",
+    "cashValue": "R$ 49,90",
+    "priceLabel": "TUDO ISSO POR APENAS",
+    "ctaLabel": "QUERO A OFERTA COMPLETA"
+  },
+  "popup": {
+    "eyebrow": "ESPERA! VOCÊ VAI DEIXAR OS 3 BÔNUS PARA TRÁS?",
+    "message": "Já que você decidiu aprender minha técnica de Brow Lamination, quero te dar uma condição especial para levar o pacote completo.\n\nEm vez de pagar R$ 49,90, você pode aproveitar agora o curso com os três bônus por apenas:",
+    "title": "Você leva:",
+    "previousPrice": "R$ 49,90",
+    "installmentCount": 0,
+    "installmentValue": "",
+    "cashValue": "R$ 39,90",
+    "priceLabel": "Tudo isso por apenas",
+    "note": "Tudo isso por apenas R$ 10 a mais que a Oferta Simples.",
+    "ctaLabel": "SIM, QUERO APROVEITAR O DESCONTO",
+    "secondaryLabel": "NÃO, QUERO APENAS O CURSO"
+  }
+},
   guarantee: {
     image: '/images/selo-garantia-7-dias.svg',
     imageAlt: 'Selo de garantia de 7 dias',
     days: 7,
-    title: '7 Dias de garantia',
-    body: 'Se dentro do prazo de garantia você concluir que o produto não atendeu às suas expectativas, basta solicitar o reembolso. Devolveremos 100% do seu dinheiro, sem burocracia.',
+    title: 'Você tem 7 dias para conhecer o material sem ficar com medo de perder seu dinheiro!',
+    body: 'Eu quero que você tenha tranquilidade para conhecer meu curso.\n\nPor isso, sua compra conta com 7 dias de garantia.\n\nSe nesse período você perceber que o conteúdo não é para você, poderá solicitar o reembolso dentro das condições da garantia.\n\nSeu dinheiro protegido. Seu aprendizado pode começar agora.',
   },
-  faqSection: { title: 'Perguntas frequentes' },
+  faqSection: { title: 'Ainda ficou alguma dúvida? Eu te respondo!' },
   faq: [
-    { question: 'Sua pergunta 01', answer: 'coloque aqui a resposta para a sua primeira pergunta frequente.' },
-    { question: 'Sua pergunta 02', answer: 'coloque aqui a resposta para a sua segunda pergunta frequente.' },
-    { question: 'Sua pergunta 03', answer: 'coloque aqui a resposta para a sua terceira pergunta frequente.' },
-    { question: 'Sua pergunta 04', answer: 'coloque aqui a resposta para a sua quarta pergunta frequente.' },
-    { question: 'Sua pergunta 05', answer: 'coloque aqui a resposta para a sua quinta pergunta frequente.' },
-  ],
-  footer: { brand: 'Marcelo Black', copyright: '© 2026 Marcelo Black' },
+  {
+    "question": "Nunca fiz Brow Lamination. Vou conseguir aprender?",
+    "answer": "Sim! O material apresenta o procedimento desde a preparação dos materiais até a finalização. Você pode estudar mesmo começando do zero. Para realizar atendimentos com segurança, é importante praticar, conhecer as contraindicações e dominar cada etapa antes de atender clientes."
+  },
+  {
+    "question": "Em quanto tempo consigo aprender a técnica?",
+    "answer": "Você pode estudar o passo a passo em apenas 1 dia, no seu próprio ritmo. O tempo para dominar a aplicação e começar a atender depende da sua prática e preparação."
+  },
+  {
+    "question": "Vou aprender a deixar sobrancelhas fininhas mais cheias?",
+    "answer": "Você vai conhecer minha forma de avaliar, alinhar e direcionar os fios para criar um efeito visual de mais volume e definição, respeitando o formato natural de cada sobrancelha. O resultado varia conforme a quantidade e as características dos fios."
+  },
+  {
+    "question": "O curso é em vídeo ou preciso participar de aulas ao vivo?",
+    "answer": "O curso principal é entregue em formato de e-book digital, com explicações, imagens e orientações do procedimento. Você pode acessar o material e estudar quando quiser, sem precisar participar de aulas ao vivo."
+  },
+  {
+    "question": "E se eu comprar e não gostar do conteúdo?",
+    "answer": "Você conta com uma garantia de 7 dias para solicitar o reembolso, conforme as condições informadas na compra. Assim, pode conhecer o material com mais tranquilidade."
+  }
+],
+  footer: { brand: 'Larissa Beauty', copyright: '© 2026 Larissa Beauty' },
 }

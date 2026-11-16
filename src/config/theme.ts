@@ -1,4 +1,21 @@
 export const theme = {
-  brand: { primary: '#2d2d2d', primaryDark: '#1f1f1f', primaryLight: '#4a4a4a' },
-  cta: { color: '#2d2d2d', dark: '#1f1f1f', light: '#4a4a4a' },
+  brand: { primary: '#C00065', primaryDark: '#490078', primaryLight: '#920080' },
+  cta: { color: '#C00065', dark: '#490078', light: '#920080' },
+  tokens: {
+    '--background-bonuses': '#65032F',
+    '--bonus-texture-light': '#F6A5D1',
+    '--bonus-texture-shadow': '#260019',
+    '--bonus-metal-mid': '#A50951',
+    '--bonus-metal-pink': '#D72B83',
+    '--bonus-metal-glint': '#FBD4EA',
+    '--background-module-tag': '#E8D5EF',
+    '--background-white': '#FFFFFF', '--background-section': '#F8F5FA',
+    '--background-card': '#241A2B', '--background-card-light': '#EDE7F1',
+    '--background-control': '#FFFFFF', '--background-dark': '#0B070F',
+    '--background-dark-secondary': '#17101D', '--background-image-placeholder': '#241A2B',
+    '--background-overlay': 'rgba(0,0,0,.75)', '--placeholder-text': '#FFFFFF',
+    '--border-soft': '#EDE7F1', '--border-placeholder': '#490078',
+    '--text-title': '#0B070F', '--text-body': '#241A2B', '--text-on-dark': '#FFFFFF',
+    '--text-soft': '#F8F5FA', '--text-muted': '#A9A1AF', '--value-strike': '#B83450',
+  },
 }

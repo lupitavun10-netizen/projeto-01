@@ -17,7 +17,7 @@ function Button({ children, onClick, href, kind = 'primary' }: { children: React
 
 function UrgencyBar() {
   const formatDate = () => new Intl.DateTimeFormat('pt-BR', {
-    day: 'numeric', month: 'long', year: 'numeric',
+    day: '2-digit', month: '2-digit', year: 'numeric',
   }).format(new Date())
   const [localDate, setLocalDate] = useState(formatDate)
 
@@ -36,10 +36,15 @@ function UrgencyBar() {
   }, [])
 
   if (!pageContent.urgencyBar.enabled) return null
-  return <div className="urgency">{pageContent.urgencyBar.text}, {localDate}</div>
+  return <div className="urgency">{pageContent.urgencyBar.text} {localDate}</div>
 }
 
-function Price({ data }: { data: { previousPrice: string; installmentCount: number; installmentValue: string; cashValue: string } }) {
+function Price({ data }: { data: { previousPrice: string; installmentCount: number; installmentValue: string; cashValue: string; priceLabel?: string } }) {
+  if (!data.installmentCount && data.cashValue) return <div className="price" aria-label="Preço da oferta">
+    {data.previousPrice && <span className="price-before"><s>De {data.previousPrice}</s></span>}
+    {data.priceLabel && <span>{data.priceLabel}</span>}
+    <strong>{data.cashValue}</strong>
+  </div>
   const ready = data.previousPrice || data.installmentValue || data.cashValue
   return <div className="price" aria-label={ready ? 'Preço da oferta' : 'Preço a definir'}>
     <span className="price-before"><s>{data.previousPrice ? `De ${data.previousPrice}` : 'Preço anterior a definir'}</s> por apenas</span>
@@ -124,8 +129,8 @@ function UpgradeModal({ open, onClose }: { open: boolean; onClose: () => void })
   return <div className="modal-backdrop" onMouseDown={event => event.target === event.currentTarget && onClose()}>
     <div className="modal" ref={dialog} role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <button ref={closeButton} className="close" onClick={onClose} aria-label="Fechar"><X /></button>
-      <span className="eyebrow">{pageContent.offers.popup.eyebrow}</span><p>{pageContent.offers.popup.message}</p><h2 id="modal-title">{pageContent.offers.popup.title}</h2>
-      <FeatureList items={pageContent.offers.complete.items} /><Price data={pageContent.offers.popup} />
+      <span className="eyebrow">{pageContent.offers.popup.eyebrow}</span><p className="copy-paragraphs">{pageContent.offers.popup.message}</p><h2 id="modal-title">{pageContent.offers.popup.title}</h2>
+      <FeatureList items={pageContent.offers.complete.items} /><Price data={pageContent.offers.popup} /><p>{pageContent.offers.popup.note}</p>
       <Button href={links.checkoutUpgrade ? withAttributionParams(links.checkoutUpgrade) : undefined}>{pageContent.offers.popup.ctaLabel}</Button>
       <Button kind="secondary" onClick={() => { onClose(); if (links.checkoutSimple) window.location.href = withAttributionParams(links.checkoutSimple) }}>{pageContent.offers.popup.secondaryLabel}</Button>
     </div>
@@ -161,21 +166,21 @@ function App() {
       if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.append(canonical) }
       canonical.href = seo.canonical
     }
-    Object.entries({ '--brand-primary': theme.brand.primary, '--brand-primary-dark': theme.brand.primaryDark, '--brand-primary-light': theme.brand.primaryLight, '--cta-color': theme.cta.color, '--cta-dark': theme.cta.dark, '--cta-light': theme.cta.light }).forEach(([key, value]) => document.documentElement.style.setProperty(key, value))
+    Object.entries({ ...theme.tokens, '--brand-primary': theme.brand.primary, '--brand-primary-dark': theme.brand.primaryDark, '--brand-primary-light': theme.brand.primaryLight, '--cta-color': theme.cta.color, '--cta-dark': theme.cta.dark, '--cta-light': theme.cta.light }).forEach(([key, value]) => document.documentElement.style.setProperty(key, value))
   }, [])
   return <>
     <UrgencyBar />
     <main>
-      <section className="hero"><div className="container hero-inner"><div className="hero-media">{placeholder({ src: pageContent.hero.image, alt: pageContent.hero.imageAlt, label: 'Imagem da Hero', ratio: '3:2' }, true)}</div><h1>{pageContent.hero.headline}</h1><p className="lead">{pageContent.hero.body}</p><div className="hero-action"><Button onClick={() => document.getElementById('ofertas')?.scrollIntoView({ behavior: 'smooth' })}>{pageContent.hero.ctaLabel}</Button><img src={pageContent.hero.securityImage} alt={pageContent.hero.securityImageAlt} /></div></div></section>
-      <section className="section section-muted"><div className="container"><h2>{pageContent.results.title}</h2><Carousel /></div></section>
-      <section className="section"><div className="container"><h2>{pageContent.modulesSection.title}</h2><Modules /></div></section>
-      <section className="section section-muted"><div className="container"><h2>{pageContent.bonusesSection.title}</h2><div className="card-grid">{pageContent.bonuses.map(item => <article className="content-card bonus" key={item.eyebrow}><div className="square-media">{placeholder(item)}</div><span className="card-tag">🎁 {item.eyebrow}:</span><h3>{item.title}</h3><p>{item.description}</p>{item.value && <s>{item.value}</s>}</article>)}</div></div></section>
-      <section className="section" id="ofertas"><div className="container"><h2>{pageContent.offersSection.title}</h2><div className="offers">
+      <section className="hero"><div className="container hero-inner"><div className="hero-media">{placeholder({ src: pageContent.hero.image, alt: pageContent.hero.imageAlt, label: 'Imagem da Hero', ratio: '3:2' }, true)}</div><h1>{pageContent.hero.headline.split('inicie uma nova profissão')[0]}<span className="gradient-text">inicie uma nova profissão</span>{pageContent.hero.headline.split('inicie uma nova profissão')[1]}</h1><p className="lead">{pageContent.hero.body}</p><div className="hero-action"><Button onClick={() => document.getElementById('ofertas')?.scrollIntoView({ behavior: 'smooth' })}>{pageContent.hero.ctaLabel}</Button><img src={pageContent.hero.securityImage} alt={pageContent.hero.securityImageAlt} /></div></div></section>
+      <section className="section section-muted results-section"><div className="container"><h2>{pageContent.results.title}</h2><Carousel /></div></section>
+      <section className="section modules-section"><div className="container"><h2>{pageContent.modulesSection.title}</h2><Modules /></div></section>
+      <section className="section section-muted bonuses-section"><div className="container"><h2>{pageContent.bonusesSection.title}</h2><div className="card-grid">{pageContent.bonuses.map(item => <article className="content-card bonus" key={item.eyebrow}><div className="square-media">{placeholder(item)}</div><span className="card-tag">🎁 {item.eyebrow}:</span><h3>{item.title}</h3><p>{item.description}</p><p className="bonus-benefit"><strong>Benefício:</strong> {item.benefit}</p>{item.value && <s>{item.value}</s>}</article>)}</div></div></section>
+      <section className="section offers-section" id="ofertas"><div className="container"><h2>{pageContent.offersSection.title}</h2><div className="offers">
         <article className="offer-card"><h3>{pageContent.offers.simple.title}</h3><FeatureList items={pageContent.offers.simple.items} /><Price data={pageContent.offers.simple} /><div className="offer-action"><Button kind="secondary" onClick={() => setModalOpen(true)}>{pageContent.offers.simple.ctaLabel}</Button><img src={pageContent.offersSection.paymentSecurityImage} alt={pageContent.offersSection.paymentSecurityAlt} loading="lazy" /></div></article>
         <article className="offer-card featured"><span className="offer-badge">{pageContent.offers.complete.badge}</span><h3>{pageContent.offers.complete.title}</h3><FeatureList items={pageContent.offers.complete.items} /><Price data={pageContent.offers.complete} /><div className="offer-action"><Button href={links.checkoutComplete ? withAttributionParams(links.checkoutComplete) : undefined}>{pageContent.offers.complete.ctaLabel}</Button><img src={pageContent.offersSection.paymentSecurityImage} alt={pageContent.offersSection.paymentSecurityAlt} loading="lazy" /></div></article>
       </div></div></section>
-      <section className="section section-muted"><div className="container guarantee"><img className="guarantee-seal" src={pageContent.guarantee.image} alt={pageContent.guarantee.imageAlt} loading="lazy" /><div><h2>{pageContent.guarantee.title}</h2><p>{pageContent.guarantee.body}</p></div></div></section>
-      <section className="section"><div className="container narrow"><h2>{pageContent.faqSection.title}</h2><div className="faq">{pageContent.faq.map((item, index) => { const expanded = faqOpen === index; return <div className="faq-item" key={item.question}><button onClick={() => setFaqOpen(expanded ? null : index)} aria-expanded={expanded} aria-controls={`faq-${index}`}><span>{item.question}</span>{expanded ? <Minus /> : <Plus />}</button><div id={`faq-${index}`} hidden={!expanded}><p>{item.answer}</p></div></div> })}</div></div></section>
+      <section className="section guarantee-section"><div className="container guarantee"><img className="guarantee-seal" src={pageContent.guarantee.image} alt={pageContent.guarantee.imageAlt} loading="lazy" /><div><h2>{pageContent.guarantee.title}</h2><p className="copy-paragraphs">{pageContent.guarantee.body}</p></div></div></section>
+      <section className="section section-muted faq-section"><div className="container narrow"><h2>{pageContent.faqSection.title}</h2><div className="faq">{pageContent.faq.map((item, index) => { const expanded = faqOpen === index; return <div className="faq-item" key={item.question}><button onClick={() => setFaqOpen(expanded ? null : index)} aria-expanded={expanded} aria-controls={`faq-${index}`}><span>{item.question}</span>{expanded ? <Minus /> : <Plus />}</button><div id={`faq-${index}`} hidden={!expanded}><p>{item.answer}</p></div></div> })}</div></div></section>
     </main>
     <footer><div className="container"><strong>{pageContent.footer.brand}</strong><p>{pageContent.footer.copyright}</p><nav aria-label="Links legais">{links.privacy && <a href={links.privacy}>Privacidade</a>}{links.terms && <a href={links.terms}>Termos</a>}{links.support && <a href={links.support}>Suporte</a>}</nav></div></footer>
     <UpgradeModal open={modalOpen} onClose={() => setModalOpen(false)} />
