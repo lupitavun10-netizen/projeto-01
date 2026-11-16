@@ -2,6 +2,8 @@ export const theme = {
   brand: { primary: '#C00065', primaryDark: '#490078', primaryLight: '#920080' },
   cta: { color: '#C00065', dark: '#490078', light: '#920080' },
   tokens: {
+    '--background-hero': '#F6E0FF',
+    '--text-hero': '#490078',
     '--headline-gold-base': '#E6B832',
     '--headline-gold-shadow': '#B98017',
     '--headline-gold-light': '#FFF28A',
