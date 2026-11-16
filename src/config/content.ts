@@ -118,11 +118,11 @@ export const pageContent = {
         "label": "Acesso vitalício ao material"
       }
     ],
-    "previousPrice": "",
-    "installmentCount": 0,
-    "installmentValue": "",
+    "previousPrice": "R$ 97,00",
+    "installmentCount": 4,
+    "installmentValue": "R$ 8,49",
     "cashValue": "R$ 29,90",
-    "priceLabel": "HOJE POR APENAS",
+    "priceLabel": "Hoje por apenas",
     "ctaLabel": "QUERO A OFERTA SIMPLES"
   },
   "complete": {
@@ -151,11 +151,11 @@ export const pageContent = {
         "value": "R$ 29,00"
       }
     ],
-    "previousPrice": "",
-    "installmentCount": 0,
-    "installmentValue": "",
+    "previousPrice": "R$ 147,00",
+    "installmentCount": 6,
+    "installmentValue": "R$ 9,49",
     "cashValue": "R$ 49,90",
-    "priceLabel": "TUDO ISSO POR APENAS",
+    "priceLabel": "Hoje por apenas",
     "ctaLabel": "QUERO A OFERTA COMPLETA"
   },
   "popup": {
@@ -204,3 +204,4 @@ export const pageContent = {
 ],
   footer: { brand: 'Larissa Beauty', copyright: '© 2026 Larissa Beauty' },
 }
+
